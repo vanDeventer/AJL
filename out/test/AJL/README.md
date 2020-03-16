@@ -7,4 +7,4 @@ It is not the only such attempt, there are several others, each with their own v
 At a more abstract levels, we can see national levels, we can find consortia that promote such efforts in an effort to make their industry more efficient.
 For example, in Germany, one finds [Indusrie 4.0](https://www.plattform-i40.de/PI40/Navigation/EN/Home/home.html), while in the US, there is the [Industrial Internet Consortium](https://www.iiconsortium.org).
 
-
+To help one navigate, one can use the [JavaDocs](JavaDocs/se/ltu/ajl/package-summary.html)
