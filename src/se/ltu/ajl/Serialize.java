@@ -1,12 +1,14 @@
 package se.ltu.ajl;
 
-import org.json.JSONObject;
+import org.json.simple.JSONObject;
 
 public class Serialize {
-    JSONObject jService = new JSONObject();
+
 
     public String loadJson(Service provider) {
-        jService.put("Service",provider.getName());
+        JSONObject jService = new JSONObject();
+        jService.put("System", provider.getMySystem().getSystemName());
+        jService.put("Service", provider.getName());
         return jService.toString();
     }
 

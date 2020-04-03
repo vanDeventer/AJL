@@ -1,0 +1,20 @@
+{
+  "prosumer": {
+    "name": "TemperatureSystem",
+    "IPaddress": "127.0.0.1",
+    "services": {
+      "indoorTemperature": [
+        "livingRoom",
+        "?inside"
+      ],
+      "outdoorTemperature": [
+        "northSide",
+        "?outside"
+      ]
+    }
+  },
+  "ServiceRegistry": {
+    "name": "ServiceRegistry",
+    "IPaddress": "127.0.0.1"
+  }
+}
