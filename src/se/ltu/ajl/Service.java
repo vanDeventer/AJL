@@ -1,5 +1,7 @@
 package se.ltu.ajl;
 
+import java.util.ArrayList;
+
 /**
  * Abstract class representing a service.
  *
@@ -10,6 +12,7 @@ abstract class Service {
     private String serviceType;
     private String name;
     private String uri;
+    private ArrayList<String> metaData;
 
     /**
      * Service constructor (of an abstract class) which needs to know to which system it belongs to
@@ -58,10 +61,15 @@ abstract class Service {
 
     /**
      * Setting the URL path to the service.
+     *
      * @param uri as a string
      */
     public void setUri(String uri) {
         this.uri = uri;
+    }
+
+    public void addMetaData(String servciceDetail) {
+        metaData.add(servciceDetail);
     }
 
 }

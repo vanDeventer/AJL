@@ -11,7 +11,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.parser.ParseException;
 
 public class Configurator {
-    public static void main(String[] args) {
+    public void processConfigFile(Prosumer prosumer) {
         try (FileReader reader = new FileReader("sysConfig.json"))  // The file has to be in the same directory as the scr directory
         {
             //Read JSON file
@@ -20,9 +20,8 @@ public class Configurator {
             System.out.println(configurationDescription);
 
             JSONObject mySystem = (JSONObject) configurationDescription.get("prosumer");
-            System.out.println(mySystem);
-            System.out.println("The name of the system is " + mySystem.get("name"));
-            System.out.println("The IP address of the system is " + mySystem.get("IPaddress"));
+            prosumer.setSystemName((String) mySystem.get("name"));
+            prosumer.setIpAddress((String) mySystem.get("IPaddress"));
 
             // read address
             Map<Object, Object> myServices = (Map<Object, Object>) mySystem.get("services");
